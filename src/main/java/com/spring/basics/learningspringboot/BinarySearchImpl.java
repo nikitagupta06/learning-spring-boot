@@ -17,7 +17,6 @@ public class BinarySearchImpl {
 	public int binarySearchAlgorithm(int[] numbers, int numbersToSearchFor) {
 
 		int[] sortedNumbers = sortALgorithm.sort(new int[] { 12, 4, 2 });
-
 		return 3;
 	}
 
