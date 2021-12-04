@@ -15,6 +15,7 @@ public class LearningSpringBootApplication {
 
 		int result = bsi.binarySearchAlgorithm(new int[] { 12, 4, 2 }, 3);
 		System.out.println(result);
+		
 
 	}
 
