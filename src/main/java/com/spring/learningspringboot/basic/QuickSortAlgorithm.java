@@ -1,5 +1,10 @@
-package com.spring.basics.learningspringboot;
+package com.spring.learningspringboot.basic;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+@Qualifier("quick")
 public class QuickSortAlgorithm implements SortAlgorithm{
 	public int[] sort(int [] numbers) {
 		//sorting logic

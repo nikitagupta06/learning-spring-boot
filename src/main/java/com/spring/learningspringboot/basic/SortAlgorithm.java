@@ -1,4 +1,4 @@
-package com.spring.basics.learningspringboot;
+package com.spring.learningspringboot.basic;
 
 public interface SortAlgorithm {
 
