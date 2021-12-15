@@ -2,13 +2,14 @@ package com.spring.learningspringboot;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import com.spring.learningspringboot.scope.PersonDao;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class LearningSpringBootApplicationScope {
 	
 	private static Logger LOGGER = 
@@ -16,8 +17,8 @@ public class LearningSpringBootApplicationScope {
 
 	public static void main(String[] args) {
 
-		ApplicationContext applicationContext = 
-				SpringApplication.run(LearningSpringBootApplicationScope.class, args);
+		try(AnnotationConfigApplicationContext applicationContext = 
+				new AnnotationConfigApplicationContext(LearningSpringBootApplicationScope.class)){
 		
 		PersonDao personDao = 
 				applicationContext.getBean(PersonDao.class);
@@ -29,7 +30,7 @@ public class LearningSpringBootApplicationScope {
 		
 		LOGGER.info("{}", personDao1);
 		LOGGER.info("{}", personDao1.getJdbcConnection());
-
+		}
 	}
 
 }

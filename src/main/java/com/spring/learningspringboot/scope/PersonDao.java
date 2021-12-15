@@ -10,13 +10,13 @@ import org.springframework.stereotype.Component;
 public class PersonDao {
 
 	@Autowired
-	private JDBCConnection jdbcConnection;
+	private XmlJDBCConnection jdbcConnection;
 
-	public JDBCConnection getJdbcConnection() {
+	public XmlJDBCConnection getJdbcConnection() {
 		return jdbcConnection;
 	}
 
-	public void setJdbcConnection(JDBCConnection jdbcConnection) {
+	public void setJdbcConnection(XmlJDBCConnection jdbcConnection) {
 		this.jdbcConnection = jdbcConnection;
 	}
 	

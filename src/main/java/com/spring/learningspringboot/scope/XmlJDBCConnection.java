@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE, 
 		proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class JDBCConnection {
+public class XmlJDBCConnection {
 
-	public JDBCConnection() {
+	public XmlJDBCConnection() {
 		System.out.println("JDBC Connection");
 	}
 }
